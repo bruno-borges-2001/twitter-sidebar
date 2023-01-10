@@ -14,7 +14,7 @@ interface SelectedItemContextProviderProps {
 const SelectedItemContext = createContext({} as SelectedItemContextProps)
 
 export function SelectedItemContextProvider({ children }: SelectedItemContextProviderProps) {
-  const [selectedItem, setSelectedItem] = useState<KeyType>(-1)
+  const [selectedItem, setSelectedItem] = useState<KeyType>(0)
 
   return <SelectedItemContext.Provider value={{ selectedItem, setSelectedItem }}>{children}</SelectedItemContext.Provider>
 }
