@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="text-white p-10">
       <SelectedItemContextProvider>
-        {Object.entries(ICON_BUTTONS).map(([label, value], index) => <IconButton key={label} index={index} label={label} {...value} />)}
+        {Object.entries(ICON_BUTTONS).map(([label, value], index) => <IconButton key={label} label={label} {...value} />)}
       </SelectedItemContextProvider>
     </div>
   )

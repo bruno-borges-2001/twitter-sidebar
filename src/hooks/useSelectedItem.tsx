@@ -1,10 +1,8 @@
 import { createContext, useContext, useState } from "react";
 
-export type KeyType = string | number
-
 interface SelectedItemContextProps {
-  selectedItem: KeyType;
-  setSelectedItem: React.Dispatch<React.SetStateAction<KeyType>>
+  selectedItem: string;
+  setSelectedItem: React.Dispatch<React.SetStateAction<string>>
 }
 
 interface SelectedItemContextProviderProps {
@@ -14,7 +12,7 @@ interface SelectedItemContextProviderProps {
 const SelectedItemContext = createContext({} as SelectedItemContextProps)
 
 export function SelectedItemContextProvider({ children }: SelectedItemContextProviderProps) {
-  const [selectedItem, setSelectedItem] = useState<KeyType>(0)
+  const [selectedItem, setSelectedItem] = useState("")
 
   return <SelectedItemContext.Provider value={{ selectedItem, setSelectedItem }}>{children}</SelectedItemContext.Provider>
 }
