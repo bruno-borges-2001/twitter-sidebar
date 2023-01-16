@@ -3,11 +3,19 @@ import { SelectedItemContextProvider } from "./hooks/useSelectedItem"
 
 import { ICON_BUTTONS } from './assets'
 
+import { BsTwitter } from 'react-icons/bs'
+
+
 function App() {
   return (
-    <div className="text-white p-10">
+    <div className="text-white p-10 flex flex-col gap-2">
       <SelectedItemContextProvider>
-        {Object.entries(ICON_BUTTONS).map(([label, value], index) => <IconButton key={label} label={label} {...value} />)}
+        <div>
+          <IconButton icon={<BsTwitter />} />
+        </div>
+        <div>
+          {Object.entries(ICON_BUTTONS).map(([label, value]) => <IconButton key={label} label={label} {...value} shakeOnHover />)}
+        </div>
       </SelectedItemContextProvider>
     </div>
   )
