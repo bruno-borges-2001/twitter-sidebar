@@ -1,7 +1,9 @@
-import { RiHome7Fill, RiHome7Line, RiHashtag, RiFileListLine, RiFileListFill } from 'react-icons/ri'
+import { RiHome7Fill, RiHome7Line, RiFileListLine, RiFileListFill } from 'react-icons/ri'
+import { HiHashtag } from 'react-icons/hi'
 import { AiFillBell, AiOutlineBell } from 'react-icons/ai'
 import { MdMail, MdMailOutline } from 'react-icons/md'
-import { IoBookmarkOutline, IoBookmark } from 'react-icons/io5'
+import { IoMdPerson } from 'react-icons/io'
+import { IoBookmarkOutline, IoBookmark, IoPersonOutline } from 'react-icons/io5'
 
 export const ICON_BUTTONS = {
   Home: {
@@ -9,8 +11,8 @@ export const ICON_BUTTONS = {
     selectedIcon: <RiHome7Fill />
   },
   Explore: {
-    icon: <RiHashtag />,
-    selectedIcon: <RiHashtag strokeWidth="1" />
+    icon: <HiHashtag />,
+    selectedIcon: <HiHashtag strokeWidth="0.5" />
   },
   Notifications: {
     icon: <AiOutlineBell />,
@@ -27,6 +29,10 @@ export const ICON_BUTTONS = {
   Lists: {
     icon: <RiFileListLine />,
     selectedIcon: <RiFileListFill />
+  },
+  Profile: {
+    icon: <IoPersonOutline />,
+    selectedIcon: <IoMdPerson />
   },
 }
 
