@@ -1,0 +1,22 @@
+.shakeable > svg path {
+  transform-origin: center;
+}
+
+.shakeable:hover > svg path {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    rotate: 0;
+  }
+  33% {
+    rotate: 10deg;
+  }
+  66% {
+    rotate: -10deg;
+  }
+  100% {
+    rotate: 0;
+  }
+}
