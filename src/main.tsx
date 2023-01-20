@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <IconContext.Provider value={{ className: 'w-[1.75rem] h-[1.75rem]' }}>
+    <IconContext.Provider value={{ className: 'w-[1.5rem] h-[1.5rem]' }}>
       <App />
     </IconContext.Provider>
   </React.StrictMode>,
